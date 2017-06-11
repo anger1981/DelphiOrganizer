@@ -1,0 +1,20 @@
+program ORGANAIZER_SERVER;
+
+uses
+  Forms,
+  main in 'main.pas' {Form1},
+  ORGANAIZER_SERVER_TLB in 'ORGANAIZER_SERVER_TLB.pas',
+  Remote_Data in 'Remote_Data.pas' {Server_Data: TRemoteDataModule} {Server_Data: CoClass};
+
+{$R *.TLB}
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.ShowMainForm := false;
+  img_id:=$0;
+  count_user:=$0;
+  Application.Run;
+end.
